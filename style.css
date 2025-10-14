@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+.logo{
+    width: 90px;
+    height: auto;
+}
+.hero-wrapper{
+    position: relative;
+  overflow: hidden;
+}
+.hero-wrapper::before{
+  content: "";
+  background-image: url("./img/bg2.png"),url("./img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.nav1 ul li{
+    list-style: none;
+}
+.nav1 ul li a{
+    text-decoration: none;
+    color: white;
+}
+.nav1 ul button a{
+    text-decoration: none;
+    color: white;
+}
+.nav1 ul .Login{
+   padding: 10px 40px;
+   border-radius: 50px;
+   border: 1px solid white;
+   background-color: transparent;
+}
+.nav1 ul .Sign-up{
+   padding: 10px 40px;
+   border-radius: 50px;
+   border: 1px solid white;
+   background-color: transparent;
+}
+.hero-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-container h1{
+     color: white;
+}
+.text-container p{
+     color: white;
+}
+.nav1 ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+span{
+    gap: 15px;
+}
+span .Events a{
+    text-decoration: none;
+    color: white;
+}
+span .Blog a{
+    text-decoration: none;
+    color: white;
+}
+span .Events{
+   padding: 10px 40px;
+   border-radius: 50px;
+   border: 1px;
+   background-color: rgb(255, 0, 144);
+}
+span .Blog{
+   padding: 10px 40px;
+   border-radius: 50px;
+   margin-left: 12px;
+   border: 1px solid white;
+   background-color: transparent;
+}
+.event-section{
+    padding: 70px;
+    position: relative;
+}
+.div-upcoming h2{
+    color: rgb(72, 5, 134);
+}
+.span-select select{
+   padding: 10px 25px;
+   border: 0px;
+   background-color: rgb(241, 218, 218);
+   border-radius: 50px;
+}
+.div-load{
+    display: flex;
+    justify-content: center;
+}
+.div-load .Load-more a{
+   text-decoration: none;
+}
+.div-load .Load-more {
+   padding: 10px 40px;
+   border-radius: 50px;
+   border: 1px solid blue;
+   background-color: transparent;
+}
+.div-event{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Cardes les évemenements */
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 36px 0;
+}
+
+.event-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+}
+
+.event-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.event-date {
+  width: 60px;
+  text-align: center;
+  color: black;
+  padding: 8px 5px;
+}
+
+.event-date .day {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.event-date .month {
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.event-text h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.event-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.large img{
+  height: 64%;
+}
+.large{
+  grid-column: span 2;
+}
+.card-large{
+  height: 300px;
+}
+/* Responsive pour 2 colonnes */
+@media (max-width: 992px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+  .event-grid {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 756px) {
+    .nav1{
+        display: none;
+    }
+    .image-kpop{
+        width: 300px;
+    }
+}
