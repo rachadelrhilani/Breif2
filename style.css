@@ -3,6 +3,8 @@
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
+
+
 .logo{
     width: 90px;
     height: auto;
@@ -95,7 +97,7 @@ span .Blog{
 }
 .event-section{
     padding: 70px;
-    position: relative;
+    z-index: -999;
 }
 .div-upcoming h2{
     color: rgb(72, 5, 134);
@@ -124,6 +126,41 @@ span .Blog{
     justify-content: space-between;
 }
 
+/* =================================================================================================== */
+
+/* event bar */
+.div-bar{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 50px;
+}
+form label{
+  color: white;
+}
+.div-form-bar div input ,
+ .div-form-bar div select,
+ .div-form-bar div input::placeholder{
+    font-family: 'DM Sans', sans-serif;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    border-bottom: 0.5px solid rgb(255, 255, 255);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+.div-form-bar form{
+   padding: 40px;
+   display: flex;
+   gap: 40px;
+   width: 100%;
+   border-radius: 50px;
+   background-color: #0b0b65;
+}
 /* =================================================================================================== */
 
 /* Cardes les évemenements */
@@ -194,6 +231,61 @@ span .Blog{
 .card-large{
   height: 300px;
 }
+
+/* =================================================================================================== */
+
+/* brands */
+
+.div-brand .div-h1{
+  display: flex;
+  justify-content: center;
+  color: rgb(72, 5, 134);
+}
+.div-brand .div-p{
+  display: flex;
+  justify-content: center;
+  color: gray;
+  margin-top: 30px;
+}
+.div-image{
+  margin-top: 30px;
+}
+.div-image div{
+  display: flex;
+  justify-content: center;
+}
+.div-image .div-image-section1{
+  gap: 20px;
+}
+.div-image .div-image-section2{
+  margin-top: 30px;
+  gap: 60px;
+}
+/* =================================================================================================== */
+
+/* blog */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+.div-blog .div-h1-blog{
+  display: flex;
+  color: rgb(72, 5, 134);
+  justify-content: center;
+}
+.div-blog .div-p{
+  display: flex;
+  color: gray;
+  justify-content: center;
+  margin-top: 30px;
+}
+.div-blog .div-p{
+  display: flex;
+  color: gray;
+  justify-content: center;
+}
+
 
 /* =================================================================================================== */
 
