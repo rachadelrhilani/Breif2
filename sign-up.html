@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
         rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <div class="hero-wrapper">
         <header class="header-section">
@@ -32,8 +34,9 @@
                     <img src="./img/kpop.png" class="image-kpop" alt="image kpop" />
                 </div>
                 <div class="form-container">
-                    <form>
+                    <form id="formulaire">
                         <h2>Sign up</h1>
+                            <p id="erreur" style="color:red; font-weight:600;"></p>
                             <div>
                                 <label for="Nom">Nom</label>
                                 <input type="text" name="Nom" id="Nom">
@@ -44,7 +47,7 @@
                             </div>
                             <div>
                                 <label for="telephone">telephone</label>
-                                <input type="tel" name="telephone" id="telephone">
+                                <input type="text" name="telephone" id="telephone">
                             </div>
                             <div>
                                 <label for="email">email</label>
@@ -52,10 +55,10 @@
                             </div>
                             <div>
                                 <label for="Mot de passe">Mot de passe</label>
-                                <input type="password" name="Mot de passe" id="Mot de passe">
+                                <input type="password" name="Mot de passe" id="Motdepasse">
                             </div>
                             <div class="btn-login">
-                                <button>Sign up</button>
+                                <button type="submit">Sign up</button>
                             </div>
                     </form>
                 </div>
@@ -121,4 +124,50 @@
         <p class="copyright">Copyright © 2022 Avi Yansah</p>
     </footer>
 </body>
+
 </html>
+<script>
+    document.getElementById("formulaire").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nom = document.getElementById("Nom").value.trim();
+        const prenom = document.getElementById("prenom").value.trim();
+        const telephone = document.getElementById("telephone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mdp= document.getElementById("Motdepasse").value.trim();
+
+        const erreur = document.getElementById("erreur");
+
+        erreur.textContent = "";
+
+        if (!nom || !prenom || !telephone || !email || !mdp) {
+            erreur.textContent = "Veuillez remplir tous les champs.";
+            return;
+        }
+
+
+        const validationdenumero = /^[0-9]+$/;
+        if (!validationdenumero.test(telephone)) {
+            erreur.textContent = "Le numéro de téléphone doit contenir uniquement des chiffres.";
+            return;
+        }
+
+        const validationdeemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!validationdeemail.test(email)) {
+            erreur.textContent = "Veuillez entrer un email valide.";
+            return;
+        }
+
+
+        if (mdp.length < 6) {
+            erreur.textContent = "Le mot de passe doit contenir au moins 6 caractères.";
+            return;
+        }
+
+        erreur.style.color = "green";
+        erreur.textContent = "Formulaire envoyé avec succès ! 🎉";
+
+
+    });
+
+</script>
