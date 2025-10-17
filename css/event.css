@@ -14,7 +14,7 @@
 /* Hero wrapper */
 .hero-wrapper {
   position: relative;
-  background-image: url("./img/event.jpg");
+  background-image: url("../img/event.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

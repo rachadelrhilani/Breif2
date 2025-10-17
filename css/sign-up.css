@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,16 +11,15 @@
     height: auto;
 }
 
-/* Hero wrapper */
+/* hero wrapper */
 .hero-wrapper {
     position: relative;
-    background-image: url("./img/blog.jpg");
+    background-image: url("../img/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 .hero-wrapper::before {
@@ -31,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(110, 91, 91, 0.4); 
+    background-color: rgba(59, 53, 53, 0.813); 
     z-index: 1; 
 }
 
@@ -76,196 +74,98 @@
     background-color: transparent;
     cursor: pointer;
 }
-
-/* Hero section */
-.hero-div {
+.hero-div{
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding: 50px;
+    gap: 10rem;
 }
-
-.text-container h1 {
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.form-container{
+    background-color: rgb(207, 205, 205);
+    padding: 60px 40px;
+    border-radius: 50px;
+    max-width: 350px;
+    width: 100%;
+    max-height: 40%;
+    height: 100%;
 }
-
-.text-container p {
-    color: white;
-    font-size: 1rem;
+.form-container h2{
+    text-align: center;
     margin-bottom: 10px;
 }
-.text-container{
-    margin-top: 120px;
+.form-container div label{
+    display: block;
+    margin-bottom: 10px;
 }
-
-
-/* Responsive: tablette */
+form .btn-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+form .btn-login button{
+     border-radius: 50px;
+     padding: 10px 20px;
+     cursor: pointer;
+     background-color: black;
+     color: white;
+     border: none;
+}
+.form-container input{
+    border-radius: 50px;
+    padding: 10px 10px;
+    width: 17rem;
+    border: none;
+    outline: none;
+}
 @media (max-width: 992px) {
-    .text-container{
-    margin-top: 0px;
-}
-    .navbar {
+    .navbar{
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 15px;
     }
-
-    .hero-div {
+    .hero-div{
         flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-        gap: 20px;
+        gap: 1rem;
     }
-
-    .text-container h1 {
-        font-size: 2rem;
+    .image-kpop{
+        display: none;
     }
-
-
-    .logo {
-        width: 80px;
+    .form-container input{
+    width: 12rem;
+}
+    .form-container{
+    max-height: 500px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
     }
 }
+    
 
-/* Responsive: mobile */
-@media (max-width: 600px) {
-    .navbar {
+@media (max-width: 756px) {
+    .navbar{
         flex-direction: column;
-        align-items: center;
-        padding: 15px;
     }
-
-    .nav1 ul {
+    .nav1 ul{
+      flex-direction: row;
+    }
+    .hero-div{
         flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        gap: 1rem;
     }
-
-    .hero-div {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 20px;
+    .image-kpop{
+        display: none;
     }
-
-    .text-container h1 {
-        font-size: 1.5rem;
+    .form-container input{
+    width: 12rem;
+}
+    .form-container{
+    max-height: 500px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
     }
-
-    .text-container p {
-        font-size: 0.9rem;
-    }
-
-    .logo {
-        width: 70px;
-    }
-} 
-
-/* =================================================================================================== */
-
-/* blog */
-/* SECTION BLOG */
-.section-blog {
-  width: 100%;
-  padding: 80px 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.container-blog {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* HEADER */
-.header-blog h1 {
-  font-size: 2.5rem;
-  color: rgb(72, 5, 134);
-  margin-bottom: 10px;
-}
-
-.header-blog p {
-  color: #777;
-  font-size: 1.1rem;
-  margin-bottom: 50px;
-}
-
-/* CARDS CONTAINER */
-.cards-blog {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-/* SINGLE CARD */
-.card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.card h2 {
-  font-size: 1.3rem;
-  color: #222;
-  margin: 15px 20px 10px;
-  line-height: 1.4;
-}
-
-.card .card-p {
-  color: #555;
-  font-size: 0.95rem;
-  margin: 0 20px 15px;
-}
-
-.card-date {
-  color: #bebcbc;
-  font-size: 0.85rem;
-  margin: 0 20px 20px;
-}
-
-/* HOVER EFFECT */
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .header-blog h1 {
-    font-size: 2rem;
-  }
-
-  .header-blog p {
-    font-size: 1rem;
-  }
-
-  .card h2 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-blog {
-    padding: 60px 0;
-  }
-
-}
-/* =================================================================================================== */
+/* =========================================================================== */
 
 /* footer */
 .footer {
@@ -337,7 +237,8 @@
 }
 
 .form-footer {
-  position: relative; /* ✅ nécessaire pour que le bouton soit relatif à l'input */
+  position: relative;
+  /* ✅ nécessaire pour que le bouton soit relatif à l'input */
   display: block;
   background-color: #fff;
   border-radius: 25px;
@@ -385,6 +286,7 @@ hr {
   color: #ccc;
   font-size: 15px;
 }
+
 /* ===================== FOOTER RESPONSIVE ===================== */
 
 /* Tablette et téléphones */
@@ -405,7 +307,8 @@ hr {
 
   .form-footer input {
     width: 100%;
-    padding: 12px 130px 12px 15px; /* laisse l’espace pour le bouton */
+    padding: 12px 130px 12px 15px;
+    /* laisse l’espace pour le bouton */
     box-sizing: border-box;
   }
 
@@ -440,7 +343,8 @@ hr {
   .form-footer input {
     width: 80%;
     max-width: 300px;
-    padding: 12px 110px 12px 15px; /* espace pour bouton */
+    padding: 12px 110px 12px 15px;
+    /* espace pour bouton */
     box-sizing: border-box;
   }
 
@@ -465,4 +369,3 @@ hr {
     margin-bottom: 10px;
   }
 }
-
